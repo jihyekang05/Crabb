@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>누르세요</h1>
+    <h1 id="brown">brown</h1>
+    <h1 id="gold">gold</h1>
+
+    <h1 id="blue">파란색1</h1>
+    <h1 id="blue">파란색2</h1>
+    <h1 id="blue">파란색3</h1>
+
+    <h1 id="red">빨간색1</h1>
+    <h1 id="red">빨간색2</h1>
+    <h1 id="red">빨간색3</h1>
+    
+
+</body>
+</html>
+
+<script>
+$(()=>{
+        /*$("h1").click(()=>{
+            //$("h1").prop("style","color:magenta");
+            //prop:속성변경
+            $("h1").css("color","magenta");
+            //addClass, removeClass
+        })
+    })*/
+
+    $("#brown").click(function(){
+        $(this).css("color","brown");
+    });
+
+    $("#gold").click(function(){
+        $(this).css("color","gold");
+    });
+
+    $(".blue").click(function(){
+        $(this).css("color","blue");
+    });
+
+    $(".red").click(function(){
+        $(".red").css("color","red");
+    });
+
+    $("h1").hover(function(){
+        $(this).css("background","cyan");
+    },function(){
+        $(this).css("background","white");
+    })
+})
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    x : <input type="text" name="" id="xvalue"><br/>
+    y : <input type="text" name="" id="yvalue"><br/>
+    <button type="buton" id="btnAdd">+</button>&nbsp;
+    <button type="buton" id="btnSub">-</button>&nbsp;
+    <button type="buton" id="btnMul">*</button>&nbsp;
+    <button type="buton" id="btnDiv">/</button></br>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    $(()=>{
+        /*$("#btnAdd").click(()=>{
+            x = parseInt($("#xvalue").val());
+            y = parseInt($("#xvalue").val());
+            $("#result").html(x+y);
+        })
+        $("#btnSub").click(()=>{
+            x = parseInt($("#xvalue").val());
+            y = parseInt($("#xvalue").val());
+            $("#result").html(x-y);
+        })
+        $("#btnMul").click(()=>{
+            x = parseInt($("#xvalue").val());
+            y = parseInt($("#xvalue").val());
+            $("#result").html(x*y);
+        })
+        $("#btnDiv").click(()=>{
+            x = parseInt($("#xvalue").val());
+            y = parseInt($("#xvalue").val());
+            $("#result").html(x/y);
+        })*/
+        $("#btnAdd").click(()=>{oper('1');});
+        $("#btnSub").click(()=>{oper('2');});
+        $("#btnMul").click(()=>{oper('3');});
+        $("#btnDiv").click(()=>{oper('4');});
+    });
+
+    function oper(sel)
+    {   x = parseInt($("#xvalue").val());
+        y = parseInt($("#yvalue").val());
+        if(sel=='1')
+            result = x+y;    
+        else if(sel=='2')
+            result = x-y;
+        else if(sel=='3')
+            result = x*y;
+        else if(sel=='4')
+            result = x/y;
+        
+        $("#result").html(result);
+        
+    }
+</script>
